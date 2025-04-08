@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DashboardActivity">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/dashboard_header_bg">
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Sustainable Living!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <!-- Feature Grid -->
+    <GridLayout
+        android:id="@+id/gridFeatures"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/headerSection">
+
+        <!-- Buttons (6 total + 1 extra feature) -->
+        <!-- Log Activities -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/button_background"
+            android:orientation="vertical"
+            android:onClick="openActivityLogger">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_activity_log"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log Activities"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!-- AI Map -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/button_background"
+            android:orientation="vertical"
+            android:onClick="openAIMap">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_ai_map"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI Map"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!-- Leaderboard -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/button_background"
+            android:orientation="vertical"
+            android:onClick="openLeaderboard">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_leaderboard"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leaderboard"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!-- Sustainability Tips -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/button_background"
+            android:orientation="vertical"
+            android:onClick="openTips">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_tips"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sustainability Tips"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!-- Carpooling -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/button_background"
+            android:orientation="vertical"
+            android:onClick="openCarpooling">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_carpool" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carpooling"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!-- Carbon Footprint -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/button_background"
+            android:orientation="vertical"
+            android:onClick="openCarbonFootprint">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_footprint" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carbon Footprint"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!-- Optional Notification Feature -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/button_background"
+            android:orientation="vertical"
+            android:onClick="openChallenges">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_notifications" />
+
+            <TextView
+                android:id="@+id/txtDashboardChallenges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Dashboard Challenges"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </GridLayout>
+
+    <!-- RecyclerView for Dashboard Data -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gridFeatures"
+        android:layout_margin="16dp" />
+
+    <!-- View Report Button -->
+    <Button
+        android:id="@+id/btnViewReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View My Progress"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:background="@color/purple_500"
+        android:textColor="@color/white"
+        android:layout_below="@id/recyclerDashboard" />
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnChallenges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_challenges"
+        android:contentDescription="Challenges"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/primaryColor"
+        android:onClick="openChallenges"
+        app:maxImageSize="48dp"/>
+</RelativeLayout>

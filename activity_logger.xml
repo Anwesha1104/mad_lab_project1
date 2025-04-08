@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editActivityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Activity (e.g., Recycling)"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_bg"/>
+
+    <EditText
+        android:id="@+id/editDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Date"
+        android:focusable="false"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableEnd="@drawable/ic_calendar"
+        android:drawablePadding="8dp"
+        android:scaleType="fitCenter"/>
+
+    <Button
+        android:id="@+id/btnLogActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log Activity"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>
