@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/createRideLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@android:color/white">
+
+        <!-- 🗺️ Mock Map -->
+
+        <ImageView
+            android:id="@+id/mockMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/mock_map"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Pickup Location -->
+        <EditText
+            android:id="@+id/pickupEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pickup Location"
+            android:inputType="text" />
+
+        <!-- Drop-off Location -->
+        <EditText
+            android:id="@+id/dropoffEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Drop-off Location"
+            android:inputType="text" />
+
+        <!-- Date Picker -->
+        <EditText
+            android:id="@+id/dateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Date"
+            android:focusable="false"
+            android:clickable="true" />
+
+        <!-- Time Picker -->
+        <EditText
+            android:id="@+id/timeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Time"
+            android:focusable="false"
+            android:clickable="true" />
+
+        <!-- Spinner for Vacancies -->
+        <Spinner
+            android:id="@+id/vacanciesSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Save Ride Button -->
+        <Button
+            android:id="@+id/saveRideButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Ride"
+            android:layout_marginTop="16dp" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/movingCar"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:lottie_fileName="moving_car.json"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+    </LinearLayout>
+</ScrollView>

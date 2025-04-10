@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/movingCar"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:lottie_fileName="moving_car.json"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to EcoPool!"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp" />
+
+    <Button
+        android:id="@+id/bookRideButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🚗 Book a Ride" />
+
+    <Button
+        android:id="@+id/viewRidesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔍 View Available Rides"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/myBookingsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📋 My Bookings"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/createRideButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create a Ride"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🚪 Logout"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#FF6B6B" />
+</LinearLayout>

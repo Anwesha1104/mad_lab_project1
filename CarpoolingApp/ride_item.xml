@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:padding="12dp">
+
+    <TextView
+        android:id="@+id/rideInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ride info here" />
+
+    <Button
+        android:id="@+id/requestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request Ride"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="end"/>
+
+    <Button
+        android:id="@+id/callButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call Driver"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/chatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat"
+        android:layout_marginStart="8dp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/movingCar"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:lottie_fileName="moving_car.json"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+
+</LinearLayout>
