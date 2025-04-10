@@ -1,0 +1,142 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carbon Footprint Calculator"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="20dp"/>
+
+        <!-- Input for Travel Distance -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter distance travelled in km:"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+
+        <EditText
+            android:id="@+id/input_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 10"
+            android:inputType="numberDecimal"/>
+
+        <!-- Dropdown for Vehicle Type -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select vehicle type:"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_vehicle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/vehicle_types"/>
+
+        <!-- Input for Electricity Consumption -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily electricty usage in Kwh:"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+
+        <EditText
+            android:id="@+id/input_electricity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 5"
+            android:inputType="numberDecimal"/>
+
+        <!-- Dropdown for Electricity Source -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Electricity Source:"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_electricity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/electricity_sources"/>
+
+        <!-- Dropdown for Diet Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Diet type:"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_diet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/diet_options"/>
+
+        <!-- Calculate Button -->
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Footprint" />
+
+        <LinearLayout
+            android:id="@+id/result_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="@drawable/result_box"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/text_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your carbon footprint will be shown here."
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Take the Quiz"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btn_compare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Graph Comparison"
+            android:layout_marginTop="10dp" />
+
+        <!-- REMOVE or RENAME this duplicate -->
+        <!-- Removed the second text_result or rename it to avoid conflicts -->
+
+
+    </LinearLayout>
+</ScrollView>
